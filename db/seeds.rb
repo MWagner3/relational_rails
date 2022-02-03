@@ -1,7 +1,22 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Exhibit.destroy_all
+Zoo.destroy_all
+
+stafford_zoo = Zoo.create!(name: "Stafford Zoo",
+                           free_admission: false,
+                           number_of_exhibits: 3)
+fairfax_zoo = Zoo.create!(name: "Fairfax Zoo",
+                           free_admission: true,
+                           number_of_exhibits: 1000)
+
+stafford_zoo.exhibits.create!(name: "American Trails",
+                              houses_deadly_creatures: true,
+                              number_of_occupants: 100)
+stafford_zoo.exhibits.create!(name: "African Safari",
+                              houses_deadly_creatures: true,
+                              number_of_occupants: 200)
+fairfax_zoo.exhibits.create!(name: "Asian Forest",
+                              houses_deadly_creatures: true,
+                              number_of_occupants: 300)
+fairfax_zoo.exhibits.create!(name: "Arctic Icebergs",
+                             houses_deadly_creatures: true,
+                             number_of_occupants: 400)
