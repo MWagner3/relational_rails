@@ -1,0 +1,8 @@
+<h1>Zoos</h1>
+<p style="text-align:right"><a href="http://localhost:3000/exhibits">All Listed Exhibits</a></p>
+<p style="text-align:right"><a href="http://localhost:3000/zoos">All Listed Zoos</a></p>
+<% @zoos.each do |zoo| %>
+  <h2><%= zoo.name %></h2>
+  <p>Free Admission: <%= zoo.free_admission %></p>
+  <p>Number of Exhibits: <%= zoo.number_of_exhibits %></p>
+<% end %>
