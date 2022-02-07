@@ -1,0 +1,3 @@
+class Maker < ApplicationRecord
+
+end
