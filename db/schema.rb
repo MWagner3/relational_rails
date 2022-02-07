@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_03_214434) do
+ActiveRecord::Schema.define(version: 2022_02_07_133230) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2022_02_03_214434) do
   create_table "zoos", force: :cascade do |t|
     t.string "name"
     t.boolean "free_admission"
-    t.integer "number_of_exhibits"
+    t.integer "number_of_employees"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

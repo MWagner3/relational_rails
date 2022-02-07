@@ -3,10 +3,10 @@ Zoo.destroy_all
 
 stafford_zoo = Zoo.create!(name: "Stafford Zoo",
                            free_admission: false,
-                           number_of_exhibits: 3)
+                           number_of_employees: 3)
 fairfax_zoo = Zoo.create!(name: "Fairfax Zoo",
                            free_admission: true,
-                           number_of_exhibits: 1000)
+                           number_of_employees: 1000)
 
 stafford_zoo.exhibits.create!(name: "American Trails",
                               houses_deadly_creatures: true,
