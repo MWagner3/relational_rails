@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "zoo index" do
 
-  describe 'user story 1' do
+  context 'user story 1' do
 
     it 'can list all zoos with details' do
       zoo_1 = Zoo.create!(name:"a zoo", free_admission: true, number_of_employees: 2)
