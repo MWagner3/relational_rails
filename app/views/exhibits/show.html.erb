@@ -4,3 +4,4 @@
 <p>Houses Deadly Creatures: <%= @exhibit.houses_deadly_creatures %></p>
 <p>Number of Occupants: <%= @exhibit.number_of_occupants %></p>
 <p>Zoo: <%= @exhibit.zoo_name %></p>
+<p> <%= link_to 'Update Exhibit', "/exhibits/#{@exhibit.id}/edit", method: :get %></p>

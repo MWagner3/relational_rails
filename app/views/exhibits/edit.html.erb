@@ -1,0 +1,11 @@
+<p style="text-align:right"><a href="/exhibits">Exhibits</a></p>
+<p style="text-align:right"><a href="/zoos">Zoos</a></p>
+<%= form_with url: "/exhibits/#{@exhibit.id}", method: :patch, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %><br>
+  <%= form.label :houses_deadly_creatures %>
+  <%= form.check_box :houses_deadly_creatures %><br>
+  <%= form.label :number_of_occupants %>
+  <%= form.number_field :number_of_occupants %><br>
+  <%= form.submit "Update Exhibit"%>
+<% end %>

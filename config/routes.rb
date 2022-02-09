@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   post '/zoos', to: 'zoos#create'
   get '/zoos/:id/edit', to: 'zoos#edit'
   patch '/zoos/:id', to: 'zoos#update'
+  get '/exhibits/:id/edit', to: 'exhibits#edit'
+  patch '/exhibits/:id', to: 'exhibits#update'
 end

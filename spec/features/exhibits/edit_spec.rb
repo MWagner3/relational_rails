@@ -18,7 +18,7 @@ RSpec.describe "Edit Exhibit Page" do
       expect(page).to have_button("Update Exhibit")
       fill_in('Name', with: 'Updated Exhibit')
       fill_in('Number of occupants', with: 5000)
-      click_button('Update Zoo')
+      click_button('Update Exhibit')
       expect(current_path).to eq("/exhibits/#{ex_1.id}")
       expect(page).to have_content('Updated Exhibit')
       expect(page).to have_content(5000)

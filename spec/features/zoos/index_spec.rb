@@ -42,11 +42,7 @@ RSpec.describe "zoo index" do
       visit "/zoos"
       expect(page).to have_link("New Zoo")
       click_link("New Zoo")
-      expect(page).to have_current_path('/zoos/new')
-      expect(page).to have_field('zoo_name')
-      expect(page).to have_field('zoo_free_admission')
-      expect(page).to have_field('zoo_number_of_employees')
-      expect(page).to have_button("Create Zoo")
+      
     end
   end
 end

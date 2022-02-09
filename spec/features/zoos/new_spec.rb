@@ -17,6 +17,7 @@ RSpec.describe "New Zoo page" do
       expect(page).to have_content("Third Zoo")
       expect(page).to have_content("Second Zoo")
       expect(page).to have_content("First Zoo")
+      
     end
   end
 end
