@@ -25,13 +25,14 @@ RSpec.describe "zoo show page" do
 
   context 'user story 12' do
 
-    it 'should have a link to update zoo'
+    it 'should have a link to update zoo' do
 
-    zoo_1 = Zoo.create!(name:"First Zoo", free_admission: true, number_of_employees: 2)
-    visit "/zoos/#{zoo_1.id}"
-    expect(page).to have_link("Update Zoo")
-    click_link("Update Zoo")
-    expect(page).to have_current_path("/zoos/#{zoo_1.id}/edit")
+      zoo_1 = Zoo.create!(name:"First Zoo", free_admission: true, number_of_employees: 2)
+      visit "/zoos/#{zoo_1.id}"
+      expect(page).to have_link("Update Zoo")
+      click_link("Update Zoo")
+      expect(page).to have_current_path("/zoos/#{zoo_1.id}/edit")
 
+    end
   end
 end

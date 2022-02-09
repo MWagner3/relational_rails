@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get '/exhibits', to: 'exhibits#index'
   get '/exhibits/:id', to: 'exhibits#show'
   post '/zoos', to: 'zoos#create'
+  get '/zoos/:id/edit', to: 'zoos#edit'
+  patch '/zoos/:id', to: 'zoos#update'
 end

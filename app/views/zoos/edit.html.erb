@@ -1,0 +1,11 @@
+<p style="text-align:right"><a href="/exhibits">Exhibits</a></p>
+<p style="text-align:right"><a href="/zoos">Zoos</a></p>
+<%= form_with url: "/zoos/#{@zoo.id}", method: :patch, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %><br>
+  <%= form.label :free_admission %>
+  <%= form.check_box :free_admission %><br>
+  <%= form.label :number_of_employees %>
+  <%= form.number_field :number_of_employees %><br>
+  <%= form.submit "Update Zoo"%>
+<% end %>
