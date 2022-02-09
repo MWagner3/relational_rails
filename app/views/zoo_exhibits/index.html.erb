@@ -1,0 +1,7 @@
+<h1> <%= @zoo.name %> Exhibits </h1>
+
+<% @exhibits.each do |exhibit| %>
+  <h2><%= exhibit.name %> </h2>
+  <p>Houses Deadly Creatures: <%= exhibit.houses_deadly_creatures %> </p>
+  <p>Number of Occupants: <%= exhibit.number_of_occupants %> </p>
+<% end %>

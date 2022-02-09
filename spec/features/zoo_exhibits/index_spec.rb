@@ -20,12 +20,15 @@ RSpec.describe "zoo exhibits index" do
                                     houses_deadly_creatures: true,
                                     number_of_occupants: 400)
       visit "/zoos/#{zoo_1.id}/exhibits"
+      save_and_open_page
       expect(page).to have_content(ex_1.name)
       expect(page).to have_content("Houses Deadly Creatures: #{ex_1.houses_deadly_creatures}")
       expect(page).to have_content("Number of Occupants: #{ex_1.number_of_occupants}")
-      expect(page).to not_have_content(ex_2.name)
-      expect(page).to not_have_content("Houses Deadly Creatures: #{ex_2.houses_deadly_creatures}")
-      expect(page).to not_have_content("Number of Occupants: #{ex_2.number_of_occupants}")
+      expect(page).to have_content(ex_2.name)
+      expect(page).to have_content("Houses Deadly Creatures: #{ex_2.houses_deadly_creatures}")
+      expect(page).to have_content("Number of Occupants: #{ex_2.number_of_occupants}")
+      expect(page).to_not have_content(ex_3.name)
+      expect(page).to_not have_content("Number of Occupants: #{ex_3.number_of_occupants}")
     end
   end
 end

@@ -1,0 +1,4 @@
+class ZooExhibits < ApplicationRecord
+
+
+end
