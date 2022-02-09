@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Zoo do
-  
+
 Exhibit.destroy_all
 Zoo.destroy_all
 
@@ -22,7 +22,7 @@ Zoo.destroy_all
         zoo_2 = Zoo.create!(name:"Second Zoo", free_admission: false, number_of_employees: 20)
         zoo_3 = Zoo.create!(name:"Third Zoo", free_admission: true, number_of_employees: 200)
 
-          expect(Zoo.ordered_by_newest).to eq([zoo_3, zoo_2, zoo_1])
+        expect(Zoo.ordered_by_newest).to eq([zoo_3, zoo_2, zoo_1])
       end
     end
   end

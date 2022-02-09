@@ -7,4 +7,7 @@ class ZoosController < ApplicationController
     @zoo = Zoo.find(params[:id])
   end
 
+  def new
+    @zoo = Zoo.new
+  end
 end

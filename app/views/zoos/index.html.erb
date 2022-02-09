@@ -1,8 +1,9 @@
 <h1>Zoos</h1>
-<p style="text-align:right"><a href="http://localhost:3000/exhibits">Exhibits</a></p>
-<p style="text-align:right"><a href="http://localhost:3000/zoos">Zoos</a></p>
+<p style="text-align:right"><a href="/exhibits">Exhibits</a></p>
+<p style="text-align:right"><a href="/zoos">Zoos</a></p>
 <% @zoos.ordered_by_newest.each do |zoo| %>
   <h2><%= zoo.name %> (Created At: <%= zoo.created_at %>)</h2>
   <p>Free Admission: <%= zoo.free_admission %></p>
   <p>Number of Employees: <%= zoo.number_of_employees %></p>
 <% end %>
+<a href="/zoos/new">New Zoo</a>
