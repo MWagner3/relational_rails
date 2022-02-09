@@ -23,6 +23,24 @@ RSpec.describe "zoo show page" do
     end
   end
 
+
+  context 'user story 6' do
+
+    it 'shows total count of exhibits a zoo has' do
+      zoo_1 = Zoo.create!(name:"a zoo", free_admission: true, number_of_employees: 2)
+      ex_1 = zoo_1.exhibits.create!(name: "America",
+                                    houses_deadly_creatures: true,
+                                    number_of_occupants: 100)
+      ex_2 = zoo_1.exhibits.create!(name: "Africa",
+                                    houses_deadly_creatures: true,
+                                    number_of_occupants: 200)
+    visit "/zoos/#{zoo_1.id}"
+    expect(page).to have_content("Exhibits Listed: #{zoo_1.exhibit_count}")
+
+
+    end
+  end
+
   context 'user story 12' do
 
     it 'should have a link to update zoo' do

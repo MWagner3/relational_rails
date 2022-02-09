@@ -11,6 +11,16 @@ Zoo.destroy_all
 
   describe "instance methods" do
 
+    it '#exhibit_count' do
+      zoo_1 = Zoo.create!(name:"a zoo", free_admission: true, number_of_employees: 2)
+      ex_1 = zoo_1.exhibits.create!(name: "America",
+                                    houses_deadly_creatures: true,
+                                    number_of_occupants: 100)
+      ex_2 = zoo_1.exhibits.create!(name: "Africa",
+                                    houses_deadly_creatures: true,
+                                    number_of_occupants: 200)
+      expect(zoo_1.exhibit_count).to eq(2)
+    end
 
   end
 

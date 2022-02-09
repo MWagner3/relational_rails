@@ -5,4 +5,7 @@ class Zoo < ApplicationRecord
     order(created_at: :desc)
   end
 
+  def exhibit_count
+    self.exhibits.count
+  end
 end
