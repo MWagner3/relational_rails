@@ -8,6 +8,17 @@ class ZoosController < ApplicationController
   end
 
   def new
-    @zoo = Zoo.new
+
+  end
+
+  def create
+    zoo = Zoo.create(zoo_params)
+    zoo.save
+    redirect_to "/zoos"
+  end
+
+  private
+  def zoo_params
+    params.permit(:name, :free_admission, :number_of_employees)
   end
 end

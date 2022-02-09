@@ -1,4 +1,6 @@
-<%= form_with model: @zoo do |form| %>
+<p style="text-align:right"><a href="/exhibits">Exhibits</a></p>
+<p style="text-align:right"><a href="/zoos">Zoos</a></p>
+<%= form_with url: '/zoos', method: :post, local: true do |form| %>
   <%= form.label :name %>
   <%= form.text_field :name %><br>
   <%= form.label :free_admission %>
@@ -7,3 +9,6 @@
   <%= form.number_field :number_of_employees %><br>
   <%= form.submit "Create Zoo"%>
 <% end %>
+
+
+<%# <%= form_with model: @zoo do |form| %> %>

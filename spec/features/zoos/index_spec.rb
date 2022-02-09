@@ -48,19 +48,5 @@ RSpec.describe "zoo index" do
       expect(page).to have_field('zoo_number_of_employees')
       expect(page).to have_button("Create Zoo")
     end
-
-    it 'should route you back to the index page after you hit submit, new record should show' do
-
-      zoo_1 = Zoo.create!(name:"First Zoo", free_admission: true, number_of_employees: 2)
-      zoo_2 = Zoo.create!(name:"Second Zoo", free_admission: false, number_of_employees: 20)
-      zoo_3 = Zoo.create!(name:"Third Zoo", free_admission: true, number_of_employees: 200)
-      visit "/zoos"
-      click_link("New Zoo")
-      fill_in('Name', with: 'Fourth Zoo')
-      fill_in('Number of employees', with: 2000)
-      click_button('Create Zoo')
-      expect(current_path).to eq("/zoos")
-      expect(page).to have_content("Fourth Zoo")
-    end
   end
 end

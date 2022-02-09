@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get '/zoos/:id', to: 'zoos#show'
   get '/exhibits', to: 'exhibits#index'
   get '/exhibits/:id', to: 'exhibits#show'
+  post '/zoos', to: 'zoos#create'
 end
