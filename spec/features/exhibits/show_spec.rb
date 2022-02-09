@@ -28,4 +28,22 @@ RSpec.describe "exhibit show page" do
     expect(page).to_not have_content(ex_1.name)
   end
 end
+
+  context 'user story 14' do
+
+    it 'should have a link to update zoo' do
+
+      zoo_1 = Zoo.create!(name:"a zoo", free_admission: true, number_of_employees: 2)
+      ex_1 = zoo_1.exhibits.create!(name: "America",
+                                    houses_deadly_creatures: true,
+                                    number_of_occupants: 100)
+      ex_2 = zoo_1.exhibits.create!(name: "Africa",
+                                    houses_deadly_creatures: true,
+                                    number_of_occupants: 200)
+      visit "/exhibits/#{ex_1.id}"
+      expect(page).to have_link("Update Exhibit")
+      click_link("Update Exhibit")
+      expect(page).to have_current_path("/exhibits/#{ex_1.id}/edit")
+    end
+  end
 end
